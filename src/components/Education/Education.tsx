@@ -21,7 +21,7 @@ const Education = () => {
       institute: "Metropolitan University",
     },
     {
-      imgLink: "https://i.postimg.cc/qgVFGnJD/image.png",
+      imgLink: "https://i.postimg.cc/3Rfr55T5/image.png",
       duration: "2016 - 2018",
       courseName: "Higher Secondary School Certificate",
       location: "Bateshwar, Sylhet-3104, Bangladesh",
@@ -29,7 +29,7 @@ const Education = () => {
       institute: "Jalalabad Cantonment Public School and College",
     },
     {
-      imgLink: "https://i.postimg.cc/qgVFGnJD/image.png",
+      imgLink: "https://i.postimg.cc/3Rfr55T5/image.png",
       duration: "2014 - 2016",
       courseName: "Secondary School Certificate",
       location: "Bateshwar, Sylhet-3104, Bangladesh",

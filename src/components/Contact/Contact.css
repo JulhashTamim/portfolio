@@ -1,0 +1,98 @@
+.contact-container {
+  padding: 10px 0;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 3px;
+  background: linear-gradient(to right, #ecf0f3, #f9fafb);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.contact-container form .descr {
+  font-size: 20px;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-for-contact,
+textarea {
+  margin: 1em 0 1em 0;
+  width: 300px;
+  position: relative;
+}
+
+.input-for-contact input,
+textarea {
+  font-size: 100%;
+  padding: 0.7em;
+  outline: none;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+  border: none;
+  border-bottom: 2px solid rgb(75 85 99 / var(--tw-text-opacity));
+  background: transparent;
+  border-radius: none;
+  width: 100%;
+  resize: none;
+}
+
+.input-for-contact label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
+  padding: 0.7em;
+  margin-left: 0.1em;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+}
+
+.input-for-contact :is(input:focus, input:valid) ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+.input-for-contact textarea:focus ~ label,
+.input-for-contact textarea:valid ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  --tw-text-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+
+.form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 767px) {
+  .contact-container{
+    width: 90%;
+    margin: auto;
+  }
+  .input-for-contact,
+textarea{
+  width: 100%;
+}
+}
