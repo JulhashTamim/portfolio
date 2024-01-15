@@ -1,9 +1,18 @@
 import { HashLink } from "react-router-hash-link";
 import resumePdf from "../../assets/CV.pdf";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Information = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
   return (
     <section
+      data-aos="fade-up"
+      data-aos-delay="300"
       id="information"
       className="flex md:flex-row flex-col-reverse gap-10 mt-4"
     >

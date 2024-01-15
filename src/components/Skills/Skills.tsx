@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import SkillCard from "./SkillCard";
+import Aos from "aos";
 
 const Skills = () => {
   const skillsData = [
@@ -16,12 +18,23 @@ const Skills = () => {
       skillImg: "https://i.postimg.cc/tgzX9kJ9/image-4.png",
     },
   ];
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
   return (
-    <div id="skills">
+    <div data-aos="fade-up" data-aos-delay="300" id="skills">
       <SectionTitle heading="Skills" subheading="Areas of Expertise" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="300"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+      >
         {skillsData.map((skill) => (
-          <SkillCard skillName={skill.skillName} skillImg={skill.skillImg} />
+          <div key={skill.skillName}>
+            <SkillCard skillName={skill.skillName} skillImg={skill.skillImg} />
+          </div>
         ))}
       </div>
     </div>
