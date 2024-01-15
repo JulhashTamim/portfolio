@@ -1,13 +1,13 @@
 import { Disclosure, Menu } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Button } from "../ui/button";
+import { HashLink } from "react-router-hash-link";
 
 const navigation = [
   { name: "Julhash.com", href: "/", current: true },
-  { name: "Skill", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Education", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
+  { name: "Skill", href: "#skills", current: false },
+  { name: "Education", href: "#education", current: false },
+  { name: "Contact", href: "#contact", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -44,9 +44,9 @@ export default function Navbar() {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <HashLink
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current
                             ? "bg-primary text-white"
@@ -56,7 +56,7 @@ export default function Navbar() {
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </HashLink>
                     ))}
                   </div>
                 </div>

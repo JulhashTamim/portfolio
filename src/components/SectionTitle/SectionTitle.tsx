@@ -1,4 +1,9 @@
-const SectionTitle = ({subheading, heading}) => {
+type TPropsType = {
+  subheading: string;
+  heading: string;
+};
+
+const SectionTitle = ({ subheading, heading }: TPropsType) => {
   return (
     <div className="text-center space-y-3 mb-20">
       <h6 className="text-[#F50057] font-sans font-bold">{subheading}</h6>
