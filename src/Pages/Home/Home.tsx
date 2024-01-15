@@ -1,5 +1,11 @@
+import Information from "@/components/Information/Information";
+
 const Home = () => {
-  return <div>Home Home</div>;
+  return (
+    <>
+      <Information />
+    </>
+  );
 };
 
 export default Home;
